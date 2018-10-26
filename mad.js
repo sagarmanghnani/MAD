@@ -7,16 +7,18 @@ function initialLogo()
         var logo = document.getElementById("initialLogo");
         logo.style.display = 'none';
         console.log(logo);
-    }
-
-    new Promise(function(resolve, reject){
-        var check = setTimeout(fadeLogo, 4000);
-        resolve(check);
-    }).then(function(val){
-        
-        backgrounds.style.display = "block";
-    })
+    }   
     
+    function getBackground()
+    {
+        backgrounds.style.display = "grid";
+    }
+    var check = setTimeout(fadeLogo, 4000);
+    var check2 = setTimeout(getBackground, 4001);
+
+    
+
+   
 
 }
 

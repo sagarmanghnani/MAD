@@ -19,15 +19,30 @@
 }
 
 .elem1{
-    grid-area: r;
-    background-color: red;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
     height: 100vh;
-    left: 0;
-    transition: left 1s linear;
-    transition-timing-function: ease-in;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+    /* grid-area: r; */
+    /* background-color: linear-gradient(#122743, #224);; */
+    background-color: red;
+    animation: myMove 5s forwards;
+    /* height: 100vh; */
 }
 .elem2{
     grid-area: m;
     width: 100%;
     height: 100vh;
+}
+@keyframes myMove{
+    0% {right: 0%;}
+    25% {right: 10%;}
+    50% {right: 25%;}
+    100% {right: 50%;}
+}
+@-webkit-keyframes myMove{
+    from{right: 0;
+    }
 }
