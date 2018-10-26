@@ -1,0 +1,33 @@
+
+.bodyContainer{
+   display: flex;
+   background: linear-gradient(#122743, #224);
+}
+.bodyContainer .initialLogo{
+    display: flex;
+    margin: auto;
+}
+
+.bodyContainer .moveBackground{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "r m";
+    height: 100%;
+    width: 100%;
+}
+
+.elem1{
+    grid-area: r;
+    background-color: red;
+    height: 100vh;
+    left: 0;
+    transition: left 1s linear;
+    transition-timing-function: ease-in;
+}
+.elem2{
+    grid-area: m;
+    width: 100%;
+    height: 100vh;
+}
